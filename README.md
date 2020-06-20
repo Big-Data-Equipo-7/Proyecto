@@ -1,8 +1,6 @@
-# Efectos del confinamiento en la calidad del aire de la Comunidad de Madrid
+## Efectos del confinamiento en la calidad del aire de la Comunidad de Madrid
 
-## Grupo 7
-
-### Integrantes
+### Integrantes Grupo 7
 Susana Vara (Representante)
 Carmen Reina
 Alfonso Gallardo
