@@ -1,0 +1,17 @@
+codigo_magnitud;descripcion_magnitud;codigo_tecnica_de_medida;descripcion_tecnica_de_medida;unidad;descipcion_unidad;valor_limite_diario;factor_calculo_diario;valor_limite_horario;factor_calculo_horario
+1;Dióxido de azufre;38;Fluorescencia ultravioleta;μg/m³;microgramos por metro cúbico;125;0.800;350;0.286
+6;Monóxido de carbono;48;Espectrometría infrarroja no dispersiva;mg/m³;miligramos por metro cúbico;10;10;10;10
+7;Monóxido de nitrógeno;8;Quimioluminiscencia;μg/m³;microgramos por metro cúbico;;;;
+8;Dióxido de nitrógeno;8;Quimioluminiscencia;μg/m³;microgramos por metro cúbico;;;200;0.500
+9;Partículas en suspensión < PM2,5;49;Absorción beta;μg/m³;microgramos por metro cubico;;;;
+10;Partículas en suspensión < PM10;49;Absorción beta;μg/m³;microgramos por metro cubico;50;2;150;0.667
+12;Óxidos de nitrógeno;8;Quimioluminiscencia;μg/m³;microgramos por metro cúbico;;;;
+14;Ozono;6;Absorción ultravioleta;μg/m³;microgramos por metro cubico;120;0.833;180;0.556
+20;Tolueno;59;Cromatografía de gases;μg/m³;microgramos por metro cúbico;;;;
+22;Black Carbon;7;Absorción de luz;μg/m³;microgramos por metro cúbico;;;;
+30;Benceno;59;Cromatografía de gases;μg/m³;microgramos por metro cúbico;;;;
+35;Etilbenceno;59;Cromatografía de gases;ug/m³;microgramos por metro cúbico;;;;
+42;Hidrocarburos totales;2;Ionización llama;mg/m³;miligramos por metro cúbico;;;;
+43;Metano ;2;Ionización llama;mg/m³;miligramos por metro cúbico;;;;
+44;Hidrocarburos no metánicos;2;Ionización llama;mg/m³;miligramos por metro cúbico;;;;
+431;MetaParaXileno ;59;Cromatografía de gases;ug/m³;microgramos por metro cúbico;;;;
