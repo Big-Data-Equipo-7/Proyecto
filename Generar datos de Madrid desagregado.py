@@ -221,7 +221,7 @@ urlMagnitudesCA = 'Datos/Magnitudes Calidad del Aire.csv'
 magnitudesCA = pd.read_csv(urlMagnitudesCA, sep=";")
 
 #Exportar a CSV fichero de calidad de aire
-datosCA.to_csv('datosCaliadAire.csv', sep=";")
+#datosCA.to_csv('datosCaliadAire.csv', sep=";")
 
 #Hacemos el merge para introducir los valores descriptivos de cada magnitud, así como los valores límite y factor de cálculo de las 5 magnitudes a tener en cuenta
 mergeCA = datosCA.merge(magnitudesCA, left_on='magnitud', right_on='codigo_magnitud')
