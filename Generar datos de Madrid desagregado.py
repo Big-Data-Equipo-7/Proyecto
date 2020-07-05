@@ -14,7 +14,7 @@ def desagrupar(dataframe):
     magnitudesMetereologicas = [81,82,83,86,87,88,89]
     array= []
     
-    print("Empezamos con el for (esto tarda en torno a 12 minutos) " + datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
+    print("Empezamos con el for (esto tarda)" + datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
     for index, row in dataframe.iterrows():
         if row.magnitud in magnitudesCalidadAire:
             #dia de la semana 0 lunes -> 6 domingo (5 y 6 fin de semana)
@@ -124,190 +124,125 @@ def desagrupar(dataframe):
 #pd.set_option('display.max_rows', None)
 
 print("Inicio de script " + datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
-#CALIDAD DEL AIRE
-#Obtenemos los Datos Calidad del aire de la Comunidad de Madrid
-urlCACMEnero18 = 'Datos/CA Comunidad de Madrid/2018_01.csv'
-urlCACMFebrero18 = 'Datos/CA Comunidad de Madrid/2018_02.csv'
-urlCACMMarzo18 = 'Datos/CA Comunidad de Madrid/2018_03.csv'
-urlCACMAbril18 = 'Datos/CA Comunidad de Madrid/2018_04.csv'
-urlCACMMayo18 = 'Datos/CA Comunidad de Madrid/2018_05.csv' 
-urlCACMJunio18 = 'Datos/CA Comunidad de Madrid/2018_06.csv'
-urlCACMJulio18 = 'Datos/CA Comunidad de Madrid/2018_07.csv'
-urlCACMAgosto18 = 'Datos/CA Comunidad de Madrid/2018_08.csv'
-urlCACMSeptiembre18 = 'Datos/CA Comunidad de Madrid/2018_09.csv'
-urlCACMOctubre18 = 'Datos/CA Comunidad de Madrid/2018_10.csv'    
-urlCACMNoviembre18 = 'Datos/CA Comunidad de Madrid/2018_11.csv'
-urlCACMDiciembre18 = 'Datos/CA Comunidad de Madrid/2018_12.csv'
-urlCACMEnero19 = 'Datos/CA Comunidad de Madrid/2019_01.csv'
-urlCACMFebrero19 = 'Datos/CA Comunidad de Madrid/2019_02.csv'
-urlCACMMarzo19 = 'Datos/CA Comunidad de Madrid/2019_03.csv'
-urlCACMAbril19 = 'Datos/CA Comunidad de Madrid/2019_04.csv'
-urlCACMMayo19 = 'Datos/CA Comunidad de Madrid/2019_05.csv' 
-urlCACMJunio19 = 'Datos/CA Comunidad de Madrid/2019_06.csv'
-urlCACMJulio19 = 'Datos/CA Comunidad de Madrid/2019_07.csv'
-urlCACMAgosto19 = 'Datos/CA Comunidad de Madrid/2019_08.csv'
-urlCACMSeptiembre19 = 'Datos/CA Comunidad de Madrid/2019_09.csv'
-urlCACMOctubre19 = 'Datos/CA Comunidad de Madrid/2019_10.csv'    
-urlCACMNoviembre19 = 'Datos/CA Comunidad de Madrid/2019_11.csv'
-urlCACMDiciembre19 = 'Datos/CA Comunidad de Madrid/2019_12.csv'    
-urlCACMEnero20 = 'Datos/CA Comunidad de Madrid/2020_01.csv'
-urlCACMFebrero20 = 'Datos/CA Comunidad de Madrid/2020_02.csv'
-urlCACMMarzo20 = 'Datos/CA Comunidad de Madrid/2020_03.csv'
-urlCACMAbril20 = 'Datos/CA Comunidad de Madrid/2020_04.csv'
-urlCACMMayo20 = 'Datos/CA Comunidad de Madrid/2020_05.csv'
 
-datosCACMEnero18 = pd.read_csv(urlCACMEnero18, sep=";")
-datosCACMFebrero18 = pd.read_csv(urlCACMFebrero18, sep=";")
-datosCACMMarzo18 = pd.read_csv(urlCACMMarzo18, sep=";")
-datosCACMAbril18 = pd.read_csv(urlCACMAbril18, sep=";")
-datosCACMMayo18 = pd.read_csv(urlCACMMayo18, sep=";")
-datosCACMJunio18 = pd.read_csv(urlCACMJunio18, sep=";")
-datosCACMJulio18 = pd.read_csv(urlCACMJulio18, sep=";")
-datosCACMAgosto18 = pd.read_csv(urlCACMAgosto18, sep=";")
-datosCACMSeptiembre18 = pd.read_csv(urlCACMSeptiembre18, sep=";")
-datosCACMOctubre18 = pd.read_csv(urlCACMOctubre18, sep=";")
-datosCACMNoviembre18 = pd.read_csv(urlCACMNoviembre18, sep=";")
-datosCACMDiciembre18 = pd.read_csv(urlCACMDiciembre18, sep=";")
-datosCACMEnero19 = pd.read_csv(urlCACMEnero19, sep=";")
-datosCACMFebrero19 = pd.read_csv(urlCACMFebrero19, sep=";")
-datosCACMMarzo19 = pd.read_csv(urlCACMMarzo19, sep=";")
-datosCACMAbril19 = pd.read_csv(urlCACMAbril19, sep=";")
-datosCACMMayo19 = pd.read_csv(urlCACMMayo19, sep=";")
-datosCACMJunio19 = pd.read_csv(urlCACMJunio19, sep=";")
-datosCACMJulio19 = pd.read_csv(urlCACMJulio19, sep=";")
-datosCACMAgosto19 = pd.read_csv(urlCACMAgosto19, sep=";")
-datosCACMSeptiembre19 = pd.read_csv(urlCACMSeptiembre19, sep=";")
-datosCACMOctubre19 = pd.read_csv(urlCACMOctubre19, sep=";")
-datosCACMNoviembre19 = pd.read_csv(urlCACMNoviembre19, sep=";")
-datosCACMDiciembre19 = pd.read_csv(urlCACMDiciembre19, sep=";")
-datosCACMEnero20 = pd.read_csv(urlCACMEnero20, sep=";")
-datosCACMFebrero20 = pd.read_csv(urlCACMFebrero20, sep=";")
-datosCACMMarzo20 = pd.read_csv(urlCACMMarzo20, sep=";")
-datosCACMAbril20 = pd.read_csv(urlCACMAbril20, sep=";")
-datosCACMMayo20 = pd.read_csv(urlCACMMayo20, sep=";")
+#DATOS METEREOLÓGICOS
+#Obtenemos los Datos Metereológicos de la Comunidad de Madrid
+urlDMCMEnero = 'Datos/DM Comunidad de Madrid/2020_01.csv'
+urlDMCMFebrero = 'Datos/DM Comunidad de Madrid/2020_02.csv'
+urlDMCMMarzo = 'Datos/DM Comunidad de Madrid/2020_03.csv'
+urlDMCMAbril = 'Datos/DM Comunidad de Madrid/2020_04.csv'
+urlDMCMMayo = 'Datos/DM Comunidad de Madrid/2020_05.csv'
+datosDMCMEnero = pd.read_csv(urlDMCMEnero, sep=";")
+datosDMCMFebrero = pd.read_csv(urlDMCMFebrero, sep=";")
+datosDMCMMarzo = pd.read_csv(urlDMCMMarzo, sep=";")
+datosDMCMAbril = pd.read_csv(urlDMCMAbril, sep=";")
+datosDMCMMayo = pd.read_csv(urlDMCMMayo, sep=";")
 
-#Obtenemos los Datos Calidad del Aire del Ayuntamiento de Madrid
-urlCAAMEnero18 = 'Datos/CA Ayuntamiento de Madrid/ene_mo18.csv'
-urlCAAMFebrero18 = 'Datos/CA Ayuntamiento de Madrid/feb_mo18.csv'
-urlCAAMMarzo18 = 'Datos/CA Ayuntamiento de Madrid/mar_mo18.csv'
-urlCAAMAbril18 = 'Datos/CA Ayuntamiento de Madrid/abr_mo18.csv'
-urlCAAMMayo18 = 'Datos/CA Ayuntamiento de Madrid/may_mo18.csv'
-urlCAAMJunio18 = 'Datos/CA Ayuntamiento de Madrid/jun_mo18.csv'
-urlCAAMJulio18 = 'Datos/CA Ayuntamiento de Madrid/jul_mo18.csv'
-urlCAAMAgosto18 = 'Datos/CA Ayuntamiento de Madrid/ago_mo18.csv'
-urlCAAMSeptiembre18 = 'Datos/CA Ayuntamiento de Madrid/sep_mo18.csv'
-urlCAAMOctubre18 = 'Datos/CA Ayuntamiento de Madrid/oct_mo18.csv'
-urlCAAMNoviembre18 = 'Datos/CA Ayuntamiento de Madrid/nov_mo18.csv'
-urlCAAMDiciembre18 = 'Datos/CA Ayuntamiento de Madrid/dic_mo18.csv'
-urlCAAMEnero19 = 'Datos/CA Ayuntamiento de Madrid/ene_mo19.csv'
-urlCAAMFebrero19 = 'Datos/CA Ayuntamiento de Madrid/feb_mo19.csv'
-urlCAAMMarzo19 = 'Datos/CA Ayuntamiento de Madrid/mar_mo19.csv'
-urlCAAMAbril19 = 'Datos/CA Ayuntamiento de Madrid/abr_mo19.csv'
-urlCAAMMayo19 = 'Datos/CA Ayuntamiento de Madrid/may_mo19.csv'
-urlCAAMJunio19 = 'Datos/CA Ayuntamiento de Madrid/jun_mo19.csv'
-urlCAAMJulio19 = 'Datos/CA Ayuntamiento de Madrid/jul_mo19.csv'
-urlCAAMAgosto19 = 'Datos/CA Ayuntamiento de Madrid/ago_mo19.csv'
-urlCAAMSeptiembre19 = 'Datos/CA Ayuntamiento de Madrid/sep_mo19.csv'
-urlCAAMOctubre19 = 'Datos/CA Ayuntamiento de Madrid/oct_mo19.csv'
-urlCAAMNoviembre19 = 'Datos/CA Ayuntamiento de Madrid/nov_mo19.csv'
-urlCAAMDiciembre19 = 'Datos/CA Ayuntamiento de Madrid/dic_mo19.csv'
-urlCAAMEnero20 = 'Datos/CA Ayuntamiento de Madrid/ene_mo20.csv'
-urlCAAMFebrero20 = 'Datos/CA Ayuntamiento de Madrid/feb_mo20.csv'
-urlCAAMMarzo20 = 'Datos/CA Ayuntamiento de Madrid/mar_mo20.csv'
-urlCAAMAbril20 = 'Datos/CA Ayuntamiento de Madrid/abr_mo20.csv'
-urlCAAMMayo20 = 'Datos/CA Ayuntamiento de Madrid/may_mo20.csv'
+#Obtenemos los Datos Metereológicos del Ayuntamiento de Madrid
+urlDMAMEnero = 'Datos/DM Ayuntamiento de Madrid/ene_meteo20.csv'
+urlDMAMFebrero = 'Datos/DM Ayuntamiento de Madrid/feb_meteo20.csv'
+urlDMAMMarzo = 'Datos/DM Ayuntamiento de Madrid/mar_meteo20.csv'
+urlDMAMAbril = 'Datos/DM Ayuntamiento de Madrid/abr_meteo20.csv'
+urlDMAMMayo = 'Datos/DM Ayuntamiento de Madrid/may_meteo20.csv'
+datosDMAMEnero = pd.read_csv(urlDMAMEnero, sep=";")
+datosDMAMFebrero = pd.read_csv(urlDMAMFebrero, sep=";")
+datosDMAMMarzo = pd.read_csv(urlDMAMMarzo, sep=";")
+datosDMAMAbril = pd.read_csv(urlDMAMAbril, sep=";")
+datosDMAMMayo = pd.read_csv(urlDMAMMayo, sep=";")
 
-datosCAAMEnero18 = pd.read_csv(urlCAAMEnero18, sep=";")
-datosCAAMFebrero18 = pd.read_csv(urlCAAMFebrero18, sep=";")
-datosCAAMMarzo18 = pd.read_csv(urlCAAMMarzo18, sep=";")
-datosCAAMAbril18 = pd.read_csv(urlCAAMAbril18, sep=";")
-datosCAAMMayo18 = pd.read_csv(urlCAAMMayo18, sep=";")
-datosCAAMJunio18 = pd.read_csv(urlCAAMJunio18, sep=";")
-datosCAAMJulio18 = pd.read_csv(urlCAAMJulio18, sep=";")
-datosCAAMAgosto18 = pd.read_csv(urlCAAMAgosto18, sep=";")
-datosCAAMSeptiembre18 = pd.read_csv(urlCAAMSeptiembre18, sep=";")
-datosCAAMOctubre18 = pd.read_csv(urlCAAMOctubre18, sep=";")
-datosCAAMNoviembre18 = pd.read_csv(urlCAAMNoviembre18, sep=";")
-datosCAAMDiciembre18 = pd.read_csv(urlCAAMDiciembre18, sep=";")
-
-datosCAAMEnero18 = pd.read_csv(urlCAAMEnero18, sep=";")
-datosCAAMFebrero18 = pd.read_csv(urlCAAMFebrero18, sep=";")
-datosCAAMMarzo18 = pd.read_csv(urlCAAMMarzo18, sep=";")
-datosCAAMAbril18 = pd.read_csv(urlCAAMAbril18, sep=";")
-datosCAAMMayo18 = pd.read_csv(urlCAAMMayo18, sep=";")
-datosCAAMJunio18 = pd.read_csv(urlCAAMJunio18, sep=";")
-datosCAAMJulio18 = pd.read_csv(urlCAAMJulio18, sep=";")
-datosCAAMAgosto18 = pd.read_csv(urlCAAMAgosto18, sep=";")
-datosCAAMSeptiembre18 = pd.read_csv(urlCAAMSeptiembre18, sep=";")
-datosCAAMOctubre18 = pd.read_csv(urlCAAMOctubre18, sep=";")
-datosCAAMNoviembre18 = pd.read_csv(urlCAAMNoviembre18, sep=";")
-datosCAAMDiciembre18 = pd.read_csv(urlCAAMDiciembre18, sep=";")
-datosCAAMEnero19 = pd.read_csv(urlCAAMEnero19, sep=";")
-datosCAAMFebrero19 = pd.read_csv(urlCAAMFebrero19, sep=";")
-datosCAAMMarzo19 = pd.read_csv(urlCAAMMarzo19, sep=";")
-datosCAAMAbril19 = pd.read_csv(urlCAAMAbril19, sep=";")
-datosCAAMMayo19 = pd.read_csv(urlCAAMMayo19, sep=";")
-datosCAAMJunio19 = pd.read_csv(urlCAAMJunio19, sep=";")
-datosCAAMJulio19 = pd.read_csv(urlCAAMJulio19, sep=";")
-datosCAAMAgosto19 = pd.read_csv(urlCAAMAgosto19, sep=";")
-datosCAAMSeptiembre19 = pd.read_csv(urlCAAMSeptiembre19, sep=";")
-datosCAAMOctubre19 = pd.read_csv(urlCAAMOctubre19, sep=";")
-datosCAAMNoviembre19 = pd.read_csv(urlCAAMNoviembre19, sep=";")
-datosCAAMDiciembre19 = pd.read_csv(urlCAAMDiciembre19, sep=";")
-datosCAAMEnero20 = pd.read_csv(urlCAAMEnero20, sep=";")
-datosCAAMFebrero20 = pd.read_csv(urlCAAMFebrero20, sep=";")
-datosCAAMMarzo20 = pd.read_csv(urlCAAMMarzo20, sep=";")
-datosCAAMAbril20 = pd.read_csv(urlCAAMAbril20, sep=";")
-datosCAAMMayo20 = pd.read_csv(urlCAAMMayo20, sep=";")
-
-#Unificamos los datos la Coumunidad de Madrid de 2018 para convertir campos en minuscula y así poder unificar con el resto de años de la comunidad
-datosCACM18 = pd.concat([datosCACMEnero18, datosCACMFebrero18, datosCACMMarzo18, datosCACMAbril18, datosCACMMayo18, datosCACMJunio18, datosCACMJulio18, datosCACMAgosto18, datosCACMSeptiembre18, datosCACMOctubre18, datosCACMNoviembre18, datosCACMDiciembre18])
-datosCACM18.columns = map(str.lower, datosCACM18.columns)
-
-#Concatenamos Datos Calidad del Aire del Ayuntamiento de Madrid y Comunidad de Madrid por separado
-print("Concatenamos datos Calidad del aire del Ayuntamiento de Madrid "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
-datosCAAM = pd.concat([datosCAAMEnero18, datosCAAMFebrero18, datosCAAMMarzo18, datosCAAMAbril18, datosCAAMMayo18, datosCAAMJunio18, datosCAAMJulio18, datosCAAMAgosto18, datosCAAMSeptiembre18, datosCAAMOctubre18, datosCAAMNoviembre18, datosCAAMDiciembre18, datosCAAMEnero19, datosCAAMFebrero19, datosCAAMMarzo19, datosCAAMAbril19, datosCAAMMayo19, datosCAAMJunio19, datosCAAMJulio19, datosCAAMAgosto19, datosCAAMSeptiembre19, datosCAAMOctubre19, datosCAAMNoviembre19, datosCAAMDiciembre19, datosCAAMEnero20, datosCAAMFebrero20, datosCAAMMarzo20, datosCAAMAbril20, datosCAAMMayo20 ], sort=True)
-print("Concatenamos datos Calidad del aire de la Comunidad de Madrid "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
-datosCACM = pd.concat([datosCACM18, datosCACMEnero19, datosCACMFebrero19, datosCACMMarzo19, datosCACMAbril19, datosCACMMayo19, datosCACMJunio19, datosCACMJulio19, datosCACMAgosto19, datosCACMSeptiembre19, datosCACMOctubre19, datosCACMNoviembre19, datosCACMDiciembre19, datosCACMEnero20, datosCACMFebrero20, datosCACMMarzo20, datosCACMAbril20, datosCACMMayo20 ], sort=True)
+#Concatenamos Datos Metereológicos del Ayuntamiento de Madrid y Comunidad de Madrid por separado
+print("Concatenamos datos Metereológicos "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
+datosDMAM = pd.concat([datosDMAMEnero, datosDMAMFebrero, datosDMAMMarzo, datosDMAMAbril, datosDMAMMayo ], sort=True)
+datosDMCM = pd.concat([datosDMCMEnero, datosDMCMFebrero, datosDMCMMarzo, datosDMCMAbril, datosDMCMMayo ], sort=True)
 
 #Convertimos en minusculas todas las columnas para poder concatenar con éxito.
-print("Convertimos en minusculas todas las columnas de ambos dataframes "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
+datosDMCM.columns = map(str.lower, datosDMCM.columns) 
+datosDMAM.columns = map(str.lower, datosDMAM.columns) 
+
+#Concatenamos Datos Metereológicos del Ayuntamiento de Madrid y Comunidad de Madrid para unificarlos.
+datosDM = pd.concat([datosDMCM, datosDMAM ], sort=True)
+
+#Creamos el campo Estacion Real para poder unirlo a la lista de estaciones
+#datosDM['estacion_real'] = datosDM['punto_muestreo'].str[:8]
+print("Generamos el campo Estación real "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
+datosDM['estacion_real'] = datosDM.punto_muestreo.apply(lambda x: x[:8])
+
+#Creamos campo Fecha para poder agrupar mejor
+datosDM['fecha'] = datosDM.ano.apply(str) + '-' + datosDM.mes.apply(str) + '-' + datosDM.dia.apply(str) 
+#datosDM['fecha'] = datosDM.dia.apply(str)  + '-'  + datosDM.mes.apply(str) +  '-' + datosDM.ano.apply(str)
+
+#Obtenemos Magnitudes Metereológicas
+urlMagnitudesDM = 'Datos/Magnitudes Metereológicas.csv'
+magnitudesDM = pd.read_csv(urlMagnitudesDM, sep=";")
+
+#Exportar a Csv
+#datosDM.to_csv('datosMetereológicos.csv', sep=";")
+
+#Hacemos el merge para introducir los valores descriptivos de cada magnitud
+mergeDM = datosDM.merge(magnitudesDM, left_on='magnitud', right_on='codigo_magnitud')
+
+
+#CALIDAD DEL AIRE
+#Obtenemos los Datos Calidad del aire de la Comunidad de Madrid
+urlCACMEnero = 'Datos/CA Comunidad de Madrid/2020_01.csv'
+urlCACMFebrero = 'Datos/CA Comunidad de Madrid/2020_02.csv'
+urlCACMMarzo = 'Datos/CA Comunidad de Madrid/2020_03.csv'
+urlCACMAbril = 'Datos/CA Comunidad de Madrid/2020_04.csv'
+urlCACMMayo = 'Datos/CA Comunidad de Madrid/2020_05.csv'
+datosCACMEnero = pd.read_csv(urlCACMEnero, sep=";")
+datosCACMFebrero = pd.read_csv(urlCACMFebrero, sep=";")
+datosCACMMarzo = pd.read_csv(urlCACMMarzo, sep=";")
+datosCACMAbril = pd.read_csv(urlCACMAbril, sep=";")
+datosCACMMayo = pd.read_csv(urlCACMMayo, sep=";")
+
+#Obtenemos los Datos Calidad del Aire del Ayuntamiento de Madrid
+urlCAAMEnero = 'Datos/CA Ayuntamiento de Madrid/ene_mo20.csv'
+urlCAAMFebrero = 'Datos/CA Ayuntamiento de Madrid/feb_mo20.csv'
+urlCAAMMarzo = 'Datos/CA Ayuntamiento de Madrid/mar_mo20.csv'
+urlCAAMAbril = 'Datos/CA Ayuntamiento de Madrid/abr_mo20.csv'
+urlCAAMMayo = 'Datos/CA Ayuntamiento de Madrid/may_mo20.csv'
+datosCAAMEnero = pd.read_csv(urlCAAMEnero, sep=";")
+datosCAAMFebrero = pd.read_csv(urlCAAMFebrero, sep=";")
+datosCAAMMarzo = pd.read_csv(urlCAAMMarzo, sep=";")
+datosCAAMAbril = pd.read_csv(urlCAAMAbril, sep=";")
+datosCAAMMayo = pd.read_csv(urlCAAMMayo, sep=";")
+
+#Concatenamos Datos Calidad del Aire del Ayuntamiento de Madrid y Comunidad de Madrid por separado
+print("Concatenamos datos Calidad del aire "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
+datosCAAM = pd.concat([datosCAAMEnero, datosCAAMFebrero, datosCAAMMarzo, datosCAAMAbril ,datosCAAMMayo ], sort=True)
+datosCACM = pd.concat([datosCACMEnero, datosCACMFebrero, datosCACMMarzo, datosCACMAbril , datosCACMMayo ], sort=True)
+
+#Convertimos en minusculas todas las columnas para poder concatenar con éxito.
 datosCACM.columns = map(str.lower, datosCACM.columns) 
 datosCAAM.columns = map(str.lower, datosCAAM.columns) 
 
-print("Eliminamos un punto de muestreo erróneo (28123002_14_8) "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Eliminamos punto de muestreo 28123002_14_8 de la comunidad de madrid. 14 Ozono se mide con técnica 6, no con 8
 datosCACM = datosCACM[datosCACM["punto_muestreo"] != "28123002_14_8"]
 
-print("Unificamos datos de Calidad del aire de Ayuntamiento y Comunidad "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Concatenamos Datos Calidad del aire del Ayuntamiento de Madrid y Comunidad de Madrid para unificarlos.
 datosCA = pd.concat([datosCACM, datosCAAM ], sort=True)
 
-print("Generamos el campo Estación real "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Creamos Estacion Real
 datosCA['estacion_real'] = datosCA['punto_muestreo'].str[:8]
 #datosCA['estacion_real'] = datosCA.punto_muestreo.apply(lambda x: x[:8])
 
-print("Creamos campo fecha "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Creamos Fecha
 datosCA['fecha'] =  datosCA.ano.apply(str) + '-' + datosCA.mes.apply(str) + '-' + datosCA.dia.apply(str)
+#datosCA['fecha'] =  datosCA.dia.apply(str) + '-' + datosCA.mes.apply(str) + '-' + datosCA.ano.apply(str)
 
-print("Obtenemos Magnitudes de Calidad del aire "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Obtenemos Magnitudes Calidad del Aire
 urlMagnitudesCA = 'Datos/Magnitudes Calidad del Aire.csv'
 magnitudesCA = pd.read_csv(urlMagnitudesCA, sep=";")
 
 #Exportar a CSV fichero de calidad de aire
-#datosCA.to_csv('datosCaliadAire.csv', sep=";")
+datosCA.to_csv('datosCaliadAire.csv', sep=";")
 
-print("Unimos magnitudes con los datos para una mejor interpretación "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Hacemos el merge para introducir los valores descriptivos de cada magnitud, así como los valores límite y factor de cálculo de las 5 magnitudes a tener en cuenta
 mergeCA = datosCA.merge(magnitudesCA, left_on='magnitud', right_on='codigo_magnitud')
 
 #mergeCA["factor_calculo_horario"] = pd.to_numeric(mergeCA["factor_calculo_horario"], downcast="float")
 #mergeCA["h01"] = pd.to_numeric(mergeCA["h01"], downcast="float")
 
-print("Calculamos el ICA parcial para cada hora del día y magnitud "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 mergeCA.loc[mergeCA['factor_calculo_horario'].notnull(), 'ica_h01'] = mergeCA['factor_calculo_horario'] * mergeCA['h01']
 mergeCA.loc[mergeCA['factor_calculo_horario'].notnull(), 'ica_h02'] = mergeCA['factor_calculo_horario'] * mergeCA['h02']
 mergeCA.loc[mergeCA['factor_calculo_horario'].notnull(), 'ica_h03'] = mergeCA['factor_calculo_horario'] * mergeCA['h03']
@@ -333,43 +268,43 @@ mergeCA.loc[mergeCA['factor_calculo_horario'].notnull(), 'ica_h22'] = mergeCA['f
 mergeCA.loc[mergeCA['factor_calculo_horario'].notnull(), 'ica_h23'] = mergeCA['factor_calculo_horario'] * mergeCA['h23']
 mergeCA.loc[mergeCA['factor_calculo_horario'].notnull(), 'ica_h24'] = mergeCA['factor_calculo_horario'] * mergeCA['h24']
 
-print("Comenzamos el desagrupado "+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Creamos array de Calidad del Aire
 arrayCA = desagrupar(mergeCA)
 
 #Creamos arrays Datos Metereológicos
-#array81 = desagrupar(mergeDM[mergeDM["magnitud"]== 81])
-#array82 = desagrupar(mergeDM[mergeDM["magnitud"]== 82])
-#array83 = desagrupar(mergeDM[mergeDM["magnitud"]== 83])
-#array86 = desagrupar(mergeDM[mergeDM["magnitud"]== 86])
-#array87 = desagrupar(mergeDM[mergeDM["magnitud"]== 87])
-#array88 = desagrupar(mergeDM[mergeDM["magnitud"]== 88])
-#array89 = desagrupar(mergeDM[mergeDM["magnitud"]== 89])
+array81 = desagrupar(mergeDM[mergeDM["magnitud"]== 81])
+array82 = desagrupar(mergeDM[mergeDM["magnitud"]== 82])
+array83 = desagrupar(mergeDM[mergeDM["magnitud"]== 83])
+array86 = desagrupar(mergeDM[mergeDM["magnitud"]== 86])
+array87 = desagrupar(mergeDM[mergeDM["magnitud"]== 87])
+array88 = desagrupar(mergeDM[mergeDM["magnitud"]== 88])
+array89 = desagrupar(mergeDM[mergeDM["magnitud"]== 89])
 
-print("Creamos de nuevo los dataframes")
+print("Creamos dataframes"+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 datosDefinitivos = pd.DataFrame(arrayCA)
-#df81 = pd.DataFrame(array81)
-#df82 = pd.DataFrame(array82)
-#df83 = pd.DataFrame(array83)
-#df86 = pd.DataFrame(array86)
-#df87 = pd.DataFrame(array87)
-#df88 = pd.DataFrame(array88)
-#df89 = pd.DataFrame(array89)
+df81 = pd.DataFrame(array81)
+df82 = pd.DataFrame(array82)
+df83 = pd.DataFrame(array83)
+df86 = pd.DataFrame(array86)
+df87 = pd.DataFrame(array87)
+df88 = pd.DataFrame(array88)
+df89 = pd.DataFrame(array89)
 
 #merges
-#datosDefinitivos = datosDefinitivos.merge(df81, on='id_merge')
-#datosDefinitivos = datosDefinitivos.merge(df82, on='id_merge')
-#datosDefinitivos = datosDefinitivos.merge(df83, on='id_merge')
-#datosDefinitivos = datosDefinitivos.merge(df86, on='id_merge')
-#datosDefinitivos = datosDefinitivos.merge(df87, on='id_merge')
-#datosDefinitivos = datosDefinitivos.merge(df88, on='id_merge')
-#datosDefinitivos = datosDefinitivos.merge(df89, on='id_merge')
+datosDefinitivos = datosDefinitivos.merge(df81, on='id_merge')
+datosDefinitivos = datosDefinitivos.merge(df82, on='id_merge')
+datosDefinitivos = datosDefinitivos.merge(df83, on='id_merge')
+datosDefinitivos = datosDefinitivos.merge(df86, on='id_merge')
+datosDefinitivos = datosDefinitivos.merge(df87, on='id_merge')
+datosDefinitivos = datosDefinitivos.merge(df88, on='id_merge')
+datosDefinitivos = datosDefinitivos.merge(df89, on='id_merge')
+
 
 #set Index
-#datosDefinitivos.set_index('id')
+datosDefinitivos.set_index('id')
 #print(datosDefinitivos)
 
-print("Exportamos a CSV los datos definitivos para el estudio")
+print("Exportamos a CSV los datos definitivos para el estudio"+ datetime.datetime.now().strftime('%d/%m/%y %I:%M %S %p'))
 #Exportar a Csv fichero detinitivo
 datosDefinitivos.to_csv('datosdefinitivos.csv', sep=";", index=False)
 print("-- Fin --")
