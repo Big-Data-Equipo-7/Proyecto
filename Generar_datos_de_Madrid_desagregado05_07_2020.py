@@ -125,11 +125,11 @@ def desagrupar(dataframe):
 
 #DATOS METEREOLÓGICOS
 #Obtenemos los Datos Metereológicos de la Comunidad de Madrid
-urlDMCMEnero = '/Datos/DM Comunidad de Madrid/2020_01.csv'
-urlDMCMFebrero = '/Datos/DM Comunidad de Madrid/2020_02.csv'
-urlDMCMMarzo = '/Datos/DM Comunidad de Madrid/2020_03.csv'
-urlDMCMAbril = '/Datos/DM Comunidad de Madrid/2020_04.csv'
-urlDMCMMayo = '/Datos/DM Comunidad de Madrid/2020_05.csv'
+urlDMCMEnero = 'Datos/DM Comunidad de Madrid/2020_01.csv'
+urlDMCMFebrero = 'Datos/DM Comunidad de Madrid/2020_02.csv'
+urlDMCMMarzo = 'Datos/DM Comunidad de Madrid/2020_03.csv'
+urlDMCMAbril = 'Datos/DM Comunidad de Madrid/2020_04.csv'
+urlDMCMMayo = 'Datos/DM Comunidad de Madrid/2020_05.csv'
 datosDMCMEnero = pd.read_csv(urlDMCMEnero, sep=";")
 datosDMCMFebrero = pd.read_csv(urlDMCMFebrero, sep=";")
 datosDMCMMarzo = pd.read_csv(urlDMCMMarzo, sep=";")
@@ -137,11 +137,11 @@ datosDMCMAbril = pd.read_csv(urlDMCMAbril, sep=";")
 datosDMCMMayo = pd.read_csv(urlDMCMMayo, sep=";")
 
 #Obtenemos los Datos Metereológicos del Ayuntamiento de Madrid
-urlDMAMEnero = '/Datos/DM Ayuntamiento de Madrid/ene_meteo20.csv'
-urlDMAMFebrero = '/Datos/DM Ayuntamiento de Madrid/feb_meteo20.csv'
-urlDMAMMarzo = '/Datos/DM Ayuntamiento de Madrid/mar_meteo20.csv'
-urlDMAMAbril = '/Datos/DM Ayuntamiento de Madrid/abr_meteo20.csv'
-urlDMAMMayo = '/Datos/DM Ayuntamiento de Madrid/may_meteo20.csv'
+urlDMAMEnero = 'Datos/DM Ayuntamiento de Madrid/ene_meteo20.csv'
+urlDMAMFebrero = 'Datos/DM Ayuntamiento de Madrid/feb_meteo20.csv'
+urlDMAMMarzo = 'Datos/DM Ayuntamiento de Madrid/mar_meteo20.csv'
+urlDMAMAbril = 'Datos/DM Ayuntamiento de Madrid/abr_meteo20.csv'
+urlDMAMMayo = 'Datos/DM Ayuntamiento de Madrid/may_meteo20.csv'
 datosDMAMEnero = pd.read_csv(urlDMAMEnero, sep=";")
 datosDMAMFebrero = pd.read_csv(urlDMAMFebrero, sep=";")
 datosDMAMMarzo = pd.read_csv(urlDMAMMarzo, sep=";")
@@ -165,11 +165,11 @@ datosDM = pd.concat([datosDMCM, datosDMAM ], sort=True)
 datosDM['estacion_real'] = datosDM.punto_muestreo.apply(lambda x: x[:8])
 
 #Creamos campo Fecha para poder agrupar mejor
-# datosDM['fecha'] = datosDM.ano.apply(str) + '-' + datosDM.mes.apply(str) + '-' + datosDM.dia.apply(str) 
-datosDM['fecha'] = datosDM.dia.apply(str)  + '-'  + datosDM.mes.apply(str) +  '-' + datosDM.ano.apply(str)
+datosDM['fecha'] = datosDM.ano.apply(str) + '-' + datosDM.mes.apply(str) + '-' + datosDM.dia.apply(str) 
+#datosDM['fecha'] = datosDM.dia.apply(str)  + '-'  + datosDM.mes.apply(str) +  '-' + datosDM.ano.apply(str)
 
 #Obtenemos Magnitudes Metereológicas
-urlMagnitudesDM = '/Datos/Magnitudes Metereológicas.csv'
+urlMagnitudesDM = 'Datos/Magnitudes Metereológicas.csv'
 magnitudesDM = pd.read_csv(urlMagnitudesDM, sep=";")
 
 #Exportar a Csv
@@ -181,11 +181,11 @@ mergeDM = datosDM.merge(magnitudesDM, left_on='magnitud', right_on='codigo_magni
 
 #CALIDAD DEL AIRE
 #Obtenemos los Datos Calidad del aire de la Comunidad de Madrid
-urlCACMEnero = '/Datos/CA Comunidad de Madrid/2020_01.csv'
-urlCACMFebrero = '/Datos/CA Comunidad de Madrid/2020_02.csv'
-urlCACMMarzo = '/Datos/CA Comunidad de Madrid/2020_03.csv'
-urlCACMAbril = '/Datos/CA Comunidad de Madrid/2020_04.csv'
-urlCACMMayo = '/Datos/CA Comunidad de Madrid/2020_05.csv'
+urlCACMEnero = 'Datos/CA Comunidad de Madrid/2020_01.csv'
+urlCACMFebrero = 'Datos/CA Comunidad de Madrid/2020_02.csv'
+urlCACMMarzo = 'Datos/CA Comunidad de Madrid/2020_03.csv'
+urlCACMAbril = 'Datos/CA Comunidad de Madrid/2020_04.csv'
+urlCACMMayo = 'Datos/CA Comunidad de Madrid/2020_05.csv'
 datosCACMEnero = pd.read_csv(urlCACMEnero, sep=";")
 datosCACMFebrero = pd.read_csv(urlCACMFebrero, sep=";")
 datosCACMMarzo = pd.read_csv(urlCACMMarzo, sep=";")
@@ -193,11 +193,11 @@ datosCACMAbril = pd.read_csv(urlCACMAbril, sep=";")
 datosCACMMayo = pd.read_csv(urlCACMMayo, sep=";")
 
 #Obtenemos los Datos Calidad del Aire del Ayuntamiento de Madrid
-urlCAAMEnero = '/Datos/CA Ayuntamiento de Madrid/ene_mo20.csv'
-urlCAAMFebrero = '/Datos/CA Ayuntamiento de Madrid/feb_mo20.csv'
-urlCAAMMarzo = '/Datos/CA Ayuntamiento de Madrid/mar_mo20.csv'
-urlCAAMAbril = '/Datos/CA Ayuntamiento de Madrid/abr_mo20.csv'
-urlCAAMMayo = '/Datos/CA Ayuntamiento de Madrid/may_mo20.csv'
+urlCAAMEnero = 'Datos/CA Ayuntamiento de Madrid/ene_mo20.csv'
+urlCAAMFebrero = 'Datos/CA Ayuntamiento de Madrid/feb_mo20.csv'
+urlCAAMMarzo = 'Datos/CA Ayuntamiento de Madrid/mar_mo20.csv'
+urlCAAMAbril = 'Datos/CA Ayuntamiento de Madrid/abr_mo20.csv'
+urlCAAMMayo = 'Datos/CA Ayuntamiento de Madrid/may_mo20.csv'
 datosCAAMEnero = pd.read_csv(urlCAAMEnero, sep=";")
 datosCAAMFebrero = pd.read_csv(urlCAAMFebrero, sep=";")
 datosCAAMMarzo = pd.read_csv(urlCAAMMarzo, sep=";")
@@ -223,11 +223,11 @@ datosCA['estacion_real'] = datosCA['punto_muestreo'].str[:8]
 #datosCA['estacion_real'] = datosCA.punto_muestreo.apply(lambda x: x[:8])
 
 #Creamos Fecha
-# datosCA['fecha'] =  datosCA.ano.apply(str) + '-' + datosCA.mes.apply(str) + '-' + datosCA.dia.apply(str)
-datosCA['fecha'] =  datosCA.dia.apply(str) + '-' + datosCA.mes.apply(str) + '-' + datosCA.ano.apply(str)
+datosCA['fecha'] =  datosCA.ano.apply(str) + '-' + datosCA.mes.apply(str) + '-' + datosCA.dia.apply(str)
+#datosCA['fecha'] =  datosCA.dia.apply(str) + '-' + datosCA.mes.apply(str) + '-' + datosCA.ano.apply(str)
 
 #Obtenemos Magnitudes Calidad del Aire
-urlMagnitudesCA = '/Datos/Magnitudes Calidad del Aire.csv'
+urlMagnitudesCA = 'Datos/Magnitudes Calidad del Aire.csv'
 magnitudesCA = pd.read_csv(urlMagnitudesCA, sep=";")
 
 #Exportar a CSV fichero de calidad de aire
