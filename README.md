@@ -1,5 +1,9 @@
 ## Efectos del confinamiento en la calidad del aire de la Comunidad de Madrid
 
+_Este proyecto es una práctica docente. Su objetivo es poner en práctica las técnicas de Big Data y Machine Learning aprendidas._
+
+## Este documento forma parte de un proyecto publicado en [https://github.com/Big-Data-Equipo-7/Proyecto](https://github.com/Big-Data-Equipo-7/Proyecto) 
+
 ### Integrantes Grupo 7
 * Alfonso Gallardo
 * Raúl Hervás
