@@ -1,4 +1,0 @@
-Conclusiones:
--	Pese a lo que pueda parecer a priori, las condiciones meteorológicas influyen mucho menos en la calidad del aire de lo que cabía esperar, no existiendo una fuerte relación entre ninguna de las magnitudes meteorológicas y las magnitudes de calidad del aire. 
--	El periodo de confinamiento ha demostrado que el detenimiento de la sociedad ha influido positivamente en la calidad del aire, siendo (como es lógico) la acción social el verdadero impulsor de la contaminación ambiental. 
--	 El índice ICA que inicialmente parecía un dato a tener en cuenta, no ha sido de ayuda ya que su cálculo está ligado a las magnitudes de calidad del aire y cada día se obtiene del valor mayor de cada una de esas magnitudes. Por lo que no se debe usar para hacer estimaciones a futuro. Sería mas factible hacer una estimación de las magnitudes de calidad del aire y a partir de ahí, si se desea obtener el ICA que supuestamente se obtendría.
