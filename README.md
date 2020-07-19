@@ -4,12 +4,31 @@ _Este proyecto es una práctica docente. Su objetivo es poner en práctica las t
 
 _Este documento forma parte de un proyecto publicado en [https://github.com/Big-Data-Equipo-7/Proyecto](https://github.com/Big-Data-Equipo-7/Proyecto)_ 
 
-### Integrantes Grupo 7
-* Alfonso Gallardo
-* Raúl Hervás
-* Carmen Reina
-* Walter Ronceros
-* Susana Vara (Representante)
+### Integrantes del Grupo 7
+* Alfonso Gallardo (Científico de datos)
+* Raúl Hervás (Analista de datos)
+* Carmen Reina (Analista de negocio)
+* Walter Ronceros (Arquitecto de datos)
+* Susana Vara (Analista de datos - Representante)
+
+### Limitaciones ###
+
+Para este estudio damos por hecho ciertas limitaciones insalvables como son:
+
+* No todas las estaciones contienen medición de todos los agentes contaminantes.
+* Las mediciones meteorológicas no se pueden prever.
+* El índice ICA (Índice Calidad del Aire) se obtiene de la medición más adversa de 5 agentes contaminantes por lo que no puede utilizarse para buscar correlaciones directas.
+
+### Tecnologías 📋
+
+* Python 3.8.2
+* Anaconda Navigator 3.0.1
+* Docker 19.03.8
+* Jupyter Notebook 6.0.3
+* Spyder 
+* Elasticsearch
+* Databricks
+* Google Colab
 
 ### Instrucciones para la reproducción del trabajo
 
@@ -20,5 +39,20 @@ _Este documento forma parte de un proyecto publicado en [https://github.com/Big-
 3. Ejecución del script _*3 - Generar datosHistoricosCalidadDelAire.py*_ para obtener el dataset que se utilizará en el siguiente punto (datosHistoricosCalidadAire.csv)
 4. Ejecución del Notebook Jupyter _*4 - Estudio datosHistoricosCalidadDelAire.ipynb*_ 
 
+### Instrucciones para entorno de visualización ###
 
+Esta fase se realiza apoyándonos en dockers donde utilizaremos la pila **ELK**. 
+
+Podrás ver un video explicativo en el siguiente enlace [Video](https://photos.app.goo.gl/AvezfKMgfHQqV7C46)
+
+#### Necesitarás ####
+* Instalar [Docker Desktop](https://www.docker.com/products/docker-desktop)
+* Descarga de contenedor [sebp/elk](https://hub.docker.com/r/sebp/elk/)
+* Arrancar el contender indicando los puertos para Elastic, Logstash y Kibana
+* Copiar dataset al contenedor para procesarlo con Logstash
+* Crear config para Logstash con nombre de index global_info
+* Crear índice global_info con el mapeo del campo localización para que el tipo de dato sea geo_point
+* Ejecutamos logstash para realizar carga con el comando: logstash -f /opt/logstash/config/grupo7_BigData_global.config
+
+*Para mas detalle consultar la _memoria._*
 
