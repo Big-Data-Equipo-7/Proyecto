@@ -54,5 +54,5 @@ Podrás ver un video explicativo en el siguiente enlace [Video](https://photos.a
 * Crear índice global_info con el mapeo del campo localización para que el tipo de dato sea geo_point
 * Ejecutamos logstash para realizar carga con el comando: logstash -f /opt/logstash/config/grupo7_BigData_global.config
 
-*Para mas detalle consultar la _memoria._*
+*Para mas detalle consultar la _memoria y/o ver video explicativo._*
 
