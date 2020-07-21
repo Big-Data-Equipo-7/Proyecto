@@ -56,3 +56,16 @@ Podrás ver un video explicativo en el siguiente enlace [Video](https://photos.a
 
 *Para mas detalle consultar la _memoria y/o ver video explicativo._*
 
+### Índice de links externos ###
+
+* Proyecto en Github: [https://github.com/Big-Data-Equipo-7/Proyecto](https://github.com/Big-Data-Equipo-7/Proyecto)
+* Notebook: [Colab de Google](https://colab.research.google.com/drive/1hAkG64bXv-BuhfkH0_3qH2lx-pIUcLTK#scrollTo=nh7diHL592kF)
+* Video demostrativo de Dockery ELK: [Video](https://photos.app.goo.gl/AvezfKMgfHQqV7C46)
+* Dataset Datos Meteorológicos Comunidad de Madrid: [Dataset](http://datos.comunidad.madrid/catalogo/dataset/calidad_aire_datos_meteo_historico)
+* Dataset Datos Calidad del Aire Comunidad de Madrid: [Dataste](http://datos.comunidad.madrid/catalogo/dataset/calidad_aire_datos_historico)
+* Dataset Estaciones Comunidad de Madrid: [Dataset](http://datos.comunidad.madrid/catalogo/dataset/calidad_aire_estaciones)
+* Dataste Datos Meteorológicos Ayuntamiento de Madrid: [Dataset](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=8d7357cec5efa610VgnVCM1000001d4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default)
+* Dataste Datos Calidad del Aire Ayuntamiento de Madrid: [Dataset](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=aecb88a7e2b73410VgnVCM2000000c205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default)
+* Dataset Estaciones Ayuntamiento de Madrid: [Dataset](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=9e42c176313eb410VgnVCM1000000b205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default)
+* Descarga de software: [Docker Desktop](https://www.docker.com/products/docker-desktop)
+* Descarga de contenedor Docker: [sebp/elk](https://hub.docker.com/r/sebp/elk/)
