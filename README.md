@@ -43,7 +43,7 @@ Para este estudio damos por hecho ciertas limitaciones insalvables como son:
 
 Esta fase se realiza apoyándonos en dockers donde utilizaremos la pila **ELK**. 
 
-Podrás ver un video explicativo en el siguiente enlace [Video](https://photos.app.goo.gl/AvezfKMgfHQqV7C46)
+Podrás ver un video explicativo en el siguiente enlace: [Video explicativo](https://drive.google.com/file/d/1x48etOLEDNPHV5f36wIQaOzZwgPiwvAA/view?usp=sharing) *(Descargar el vídeo para una mayor calidad de visualización)*
 
 #### Necesitarás ####
 * Instalar [Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -54,13 +54,13 @@ Podrás ver un video explicativo en el siguiente enlace [Video](https://photos.a
 * Crear índice global_info con el mapeo del campo localización para que el tipo de dato sea geo_point
 * Ejecutamos logstash para realizar carga con el comando: logstash -f /opt/logstash/config/grupo7_BigData_global.config
 
-*Para mas detalle consultar la _memoria y/o ver video explicativo._*
+*Para mas detalle consultar la _memoria y/o ver el [video explicativo](https://drive.google.com/file/d/1x48etOLEDNPHV5f36wIQaOzZwgPiwvAA/view?usp=sharing)._*
 
 ### Índice de links externos ###
 
 * Proyecto en Github: [https://github.com/Big-Data-Equipo-7/Proyecto](https://github.com/Big-Data-Equipo-7/Proyecto)
 * Notebook: [Colab de Google](https://colab.research.google.com/drive/1hAkG64bXv-BuhfkH0_3qH2lx-pIUcLTK#scrollTo=nh7diHL592kF)
-* Video demostrativo de Dockery ELK: [Video](https://photos.app.goo.gl/AvezfKMgfHQqV7C46)
+* Video demostrativo de Docker y ELK: [Video](https://photos.app.goo.gl/AvezfKMgfHQqV7C46) *(Descargar el vídeo para una mayor calidad de visualización)*
 * Dataset Datos Meteorológicos Comunidad de Madrid: [Dataset](http://datos.comunidad.madrid/catalogo/dataset/calidad_aire_datos_meteo_historico)
 * Dataset Datos Calidad del Aire Comunidad de Madrid: [Dataste](http://datos.comunidad.madrid/catalogo/dataset/calidad_aire_datos_historico)
 * Dataset Estaciones Comunidad de Madrid: [Dataset](http://datos.comunidad.madrid/catalogo/dataset/calidad_aire_estaciones)
